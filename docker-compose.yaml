@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  # Server service
+  server-msal:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: backend-authservice
+    ports:
+      - "3000:3000"
+    networks:
+      - msa
+    depends_on:
+      - redis
+
+  # Redis service
+  redis:
+    image: redis
+    container_name: redis-authservice
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./redis-data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - msa
+
+  # Client service
+  client-msal:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: frontend-authservice
+    ports:
+      - "4000:80"
+    depends_on:
+      - server-msal
+    networks:
+      - msa
+
+networks:
+  msa:
+
+volumes:
+  redis-data:
+    driver: local
