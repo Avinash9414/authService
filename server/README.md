@@ -35,7 +35,7 @@ The Microsoft Authentication Library (MSAL) for Node.js enables applications to 
 
 - Node.js installed
 - Azure subscription
-- Registered application in Azure AD
+- Registered application in Azure Entra ID
 
 ## Installation and Configuration
 
@@ -82,7 +82,7 @@ npm start
 ## Configurations
 
 1. **authConfig.js** : Configures all the env variables from .env and exports them.
-2. **msalConfig.js** : Configures MSAL and also configures the cache for msal using redis.Exports the msal instance and the cryptoProvider instance.
+2. **msalConfig.js** : Configures MSAL and also configures the cache for msal using redis. Exports the msal instance and the cryptoProvider instance.
 
 ## Key Functions
 
@@ -232,7 +232,7 @@ The following routes handle the authentication and user information retrieval pr
 
 1. **errorHandler.js** : Handles errors and logs them and sends error messages.
 2. **fetch.js** : Takes in the endpoint and accesstoken and makes axios request to the endpoint with the access token in the Auth header. Returns the response from the endpoint.
-3. **getMetaData.js** : Includes 2 methods to retrieve metadata information from microsoft endpoint and returns the response.
+3. **getMetaData.js** : Includes 2 methods, getCloudDiscoveryMetadata() and getAuthorityMetadata(), to retrieve metadata information from microsoft endpoint and returns the response. This is used to improve the performance as the metadata discovery by msal can be avoided.
 4. **redisCache.js** : Configures the redis.
 
 ## Conclusion

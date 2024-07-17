@@ -10,8 +10,11 @@ module.exports = {
     host: process.env.REDIS_HOST,
     port: process.env.REDIS_PORT,
   },
+  scopes: process.env.SCOPES,
   CLIENT_REDIRECT_URI: process.env.CLIENT_REDIRECT_URI,
   GRAPH_MEMEBEROF_ENDPOINT: process.env.GRAPH_API_ENDPOINT + "v1.0/me/memberOf",
   GRAPH_INVITE_ENDPOINT: process.env.GRAPH_INVITE_ENDPOINT,
   GRAPH_ME_ENDPOINT: process.env.GRAPH_API_ENDPOINT + "v1.0/me",
+  REQUIRED_GROUPS_TO_INVITE: process.env.REQUIRED_GROUPS_TO_INVITE,
+  REQUIRED_ROLES_TO_INVITE: process.env.REQUIRED_ROLES_TO_INVITE,
 };

@@ -6,7 +6,7 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-    container_name: backend-authservice
+    container_name: backend-authService
     ports:
       - "3000:3000"
     networks:
@@ -17,7 +17,7 @@ services:
   # Redis service
   redis:
     image: redis
-    container_name: redis-authservice
+    container_name: redis-authService
     ports:
       - "6379:6379"
     volumes:
@@ -31,7 +31,7 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
-    container_name: frontend-authservice
+    container_name: frontend-authService
     ports:
       - "4000:80"
     depends_on:
