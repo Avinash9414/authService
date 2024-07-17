@@ -58,17 +58,14 @@ TENANT_ID=<Tenant-ID>
 REDIRECT_URI=<Server_Base_URL/redirect>
 REDIS_HOST=<HostAddr-For-Redis>
 REDIS_PORT=<Redis-Port>
-POST_LOGOUT_REDIRECT_URI=<Client_Base_URL>
-
+POST_LOGOUT_REDIRECT_URI=<Client_Base_URL
 GRAPH_API_ENDPOINT="https://graph.microsoft.com/" # graph api endpoint string should end with a trailing slash
-
 CLIENT_REDIRECT_URI=<Client_Base_URL/profile>
-
 EXPRESS_SESSION_SECRET=<Express-Session-Secret>
-
 GRAPH_INVITE_ENDPOINT="https://graph.microsoft.com/v1.0/invitations"
-
 SCOPES=<Scopes>
+REQUIRED_GROUPS_TO_INVITE=<Groups-separated-by-comma>
+REQUIRED_ROLES_TO_INVITE=<Roles-separated-by-comma>
 ```
 
 ### Run the server:
