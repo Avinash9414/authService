@@ -141,7 +141,7 @@ const authService = {
     try {
       const requiredGroups = config.REQUIRED_GROUPS_TO_INVITE.split(",");
       const requiredRoles = config.REQUIRED_ROLES_TO_INVITE.split(",");
-      console.log(requiredGroups, requiredRoles);
+      // console.log(requiredGroups, requiredRoles);
       req.body = { ...req.body, requiredGroups, requiredRoles };
       const response = await this.authorize(req);
       if (!response) {
