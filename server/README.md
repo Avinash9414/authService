@@ -137,7 +137,7 @@ Returns the logout URL to redirect the user to the Azure AD logout page.
 This function invites a user to join the organization. It sends an email invitation to the specified user with a message.
 
 **Request**:
-Parameters include invitedUserEmailAddress,inviteRedirectUrl,sendInvitationMessage(boolean).
+Parameters include invitedUserEmailAddress,inviteRedirectUrl,sendInvitationMessage(boolean) and the Group ID of the Group to be added into.
 
 **Response**:
 Returns the invitation status.
