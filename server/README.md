@@ -66,6 +66,7 @@ GRAPH_INVITE_ENDPOINT="https://graph.microsoft.com/v1.0/invitations"
 SCOPES=<Scopes>
 REQUIRED_GROUPS_TO_INVITE=<Groups-separated-by-comma>
 REQUIRED_ROLES_TO_INVITE=<Roles-separated-by-comma>
+NODE_ENV=<"dev"> #set to "production" for cookie to be sent over https
 ```
 
 ### Run the server:

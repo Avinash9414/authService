@@ -17,4 +17,5 @@ module.exports = {
   GRAPH_ME_ENDPOINT: process.env.GRAPH_API_ENDPOINT + "v1.0/me",
   REQUIRED_GROUPS_TO_INVITE: process.env.REQUIRED_GROUPS_TO_INVITE,
   REQUIRED_ROLES_TO_INVITE: process.env.REQUIRED_ROLES_TO_INVITE,
+  NODE_ENV: process.env.NODE_ENV,
 };

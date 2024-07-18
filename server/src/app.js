@@ -30,9 +30,11 @@ app.use(
     secret: process.env.EXPRESS_SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
+    rolling: true,
     cookie: {
       httpOnly: true,
-      secure: false, // set this to true on production
+      secure: config.NODE_ENV === "production",
+      maxAge: 2 * 60 * 60 * 1000,
     },
   })
 );
