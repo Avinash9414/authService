@@ -56,6 +56,7 @@ const authController = {
   logout: async (req, res) => {
     try {
       const logoutUri = await authService.logout(req);
+      res.clearCookie("connect.sid");
       res.status(200).json({ logouturl: logoutUri });
     } catch (error) {
       res.status(500).json({ message: error.message });

@@ -26,7 +26,7 @@ app.use(
 );
 app.use(
   session({
-    store: new RedisStore({ client: redisClient }),
+    store: new RedisStore({ client: redisClient, ttl: 2 * 60 * 60 }),
     secret: process.env.EXPRESS_SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
